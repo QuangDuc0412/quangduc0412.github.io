@@ -1,9 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>qduck</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hướng Dẫn Kỹ Thuật</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+    }
+
+    body {
+        background: #0f172a;
+        color: #e2e8f0;
+        display: flex;
+        min-height: 100vh;
+    }
+
+    aside {
+        width: 250px;
+        background: #111827;
+        padding: 20px;
+        border-right: 1px solid #1f2937;
+        position: fixed;
+        height: 100%;
+    }
+
+    aside h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #38bdf8;
+    }
+
+    aside ul {
+        list-style: none;
+    }
+
+    aside ul li {
+        margin: 10px 0;
+    }
+
+    aside ul li a {
+        text-decoration: none;
+        color: #94a3b8;
+        transition: 0.3s;
+    }
+
+    aside ul li a:hover {
+        color: #38bdf8;
+    }
+
+    main {
+        margin-left: 250px;
+        padding: 40px;
+        width: 100%;
+    }
+
+    header {
+        margin-bottom: 40px;
+    }
+
+    header h1 {
+        font-size: 32px;
+        color: #38bdf8;
+    }
+
+    section {
+        margin-bottom: 40px;
+        background: #1e293b;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    section h2 {
+        margin-bottom: 15px;
+        color: #facc15;
+    }
+
+    p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+    .warning {
+        background: #7f1d1d;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .success {
+        background: #065f46;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    pre {
+        background: #0f172a;
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+        border: 1px solid #334155;
+    }
+
+    code {
+        color: #38bdf8;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        color: #64748b;
+    }
+
+    @media(max-width: 768px) {
+        aside {
+            display: none;
+        }
+
+        main {
+            margin-left: 0;
+        }
+    }
+</style>
+
 </head>
 <body>
-  <h1>Hello GitHub Pages 👋</h1>
+
+<aside>
+    <h2>Mục Lục</h2>
+    <ul>
+        <li><a href="#gioithieu">Giới thiệu</a></li>
+        <li><a href="#cai-dat">Cài đặt</a></li>
+        <li><a href="#su-dung">Sử dụng</a></li>
+        <li><a href="#loi">Xử lý lỗi</a></li>
+    </ul>
+</aside>
+
+<main>
+
+<header>
+    <h1>Hướng Dẫn Kỹ Thuật Cài Đặt Hệ Thống</h1>
+</header>
+
+<section id="gioithieu">
+    <h2>1. Giới thiệu</h2>
+    <p>Tài liệu này hướng dẫn bạn cách cài đặt và cấu hình hệ thống một cách chính xác và an toàn.</p>
+    <div class="success">
+        ✔ Đảm bảo bạn có quyền quản trị trước khi thực hiện.
+    </div>
+</section>
+
+<section id="cai-dat">
+    <h2>2. Cài đặt</h2>
+    <p>Chạy lệnh sau để cài đặt:</p>
+    <pre><code>sudo apt update
+sudo apt install example-package</code></pre>
+</section>
+
+<section id="su-dung">
+    <h2>3. Sử dụng</h2>
+    <p>Sau khi cài đặt, bạn có thể khởi chạy chương trình bằng:</p>
+    <pre><code>example-command --start</code></pre>
+</section>
+
+<section id="loi">
+    <h2>4. Xử lý lỗi</h2>
+    <div class="warning">
+        ⚠ Nếu gặp lỗi quyền truy cập, hãy kiểm tra lại quyền người dùng.
+    </div>
+    <p>Xem log hệ thống bằng lệnh:</p>
+    <pre><code>journalctl -xe</code></pre>
+</section>
+
+<footer>
+    © 2026 Hướng Dẫn Kỹ Thuật | Thiết kế bởi Bạn
+</footer>
+
+</main>
+
 </body>
 </html>
