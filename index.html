@@ -3,188 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hướng Dẫn Kỹ Thuật</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Hướng Dẫn Việt Hóa Pokemon</title>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Inter', sans-serif;
-    }
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:#0a0a0a;
+  color:white;
+}
 
-    body {
-        background: #0f172a;
-        color: #e2e8f0;
-        display: flex;
-        min-height: 100vh;
-    }
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  font-size: 14px;
+  border-top: 1px solid #222;
+  margin-top: 400px;
+}
 
-    aside {
-        width: 250px;
-        background: #111827;
-        padding: 20px;
-        border-right: 1px solid #1f2937;
-        position: fixed;
-        height: 100%;
-    }
+.hero{
+  position:relative;
+  background:linear-gradient(135deg,#000000,#0f2027,#000000);
+  padding:60px 20px;
+  text-align:center;
+  overflow:hidden;
+}
 
-    aside h2 {
-        font-size: 18px;
-        margin-bottom: 20px;
-        color: #38bdf8;
-    }
+.hero::after{
+  content:"";
+  position:absolute;
+  right:-60px;
+  top:-40px;
+  width:260px;
+  height:260px;
+  background:url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png') no-repeat center;
+  background-size:contain;
+  opacity:0.07;
+  filter:blur(2px);
+}
 
-    aside ul {
-        list-style: none;
-    }
+.hero h1{
+  font-size:42px;
+  margin:0;
+  background:linear-gradient(90deg,#00f5ff,#0099ff,#8a2be2,#ff00ff);
+  background-size:300%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientMove 6s infinite linear;
+}
 
-    aside ul li {
-        margin: 10px 0;
-    }
+@keyframes gradientMove{
+  0%{background-position:0%}
+  100%{background-position:300%}
+}
 
-    aside ul li a {
-        text-decoration: none;
-        color: #94a3b8;
-        transition: 0.3s;
-    }
+.hero p{
+  color:#ccc;
+  margin-top:12px;
+}
 
-    aside ul li a:hover {
-        color: #38bdf8;
-    }
+.main-box{
+  max-width:900px;
+  margin:40px auto;
+  padding:25px;
+  background:#111;
+  border-radius:14px;
+  box-shadow:0 0 20px rgba(0,255,255,0.05);
+}
 
-    main {
-        margin-left: 250px;
-        padding: 40px;
-        width: 100%;
-    }
+.section h2{
+  color:#ffffff;
+  border-left:4px solid #00f5ff;
+  padding-left:10px;
+}
 
-    header {
-        margin-bottom: 40px;
-    }
+.dropdown{
+  position:relative;
+  margin-bottom:20px;
+}
 
-    header h1 {
-        font-size: 32px;
-        color: #38bdf8;
-    }
+.dropdown-btn{
+  width:100%;
+  padding:14px;
+  background:#1a1a1a;
+  border:none;
+  border-radius:10px;
+  color:#00f5ff;
+  font-size:16px;
+  cursor:pointer;
+  text-align:left;
+}
 
-    section {
-        margin-bottom: 40px;
-        background: #1e293b;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    }
+.dropdown-content{
+  display:none;
+  position:absolute;
+  width:100%;
+  background:#1a1a1a;
+  border-radius:10px;
+  margin-top:5px;
+  overflow:hidden;
+  z-index:100;
+}
 
-    section h2 {
-        margin-bottom: 15px;
-        color: #facc15;
-    }
+.dropdown-content div{
+  padding:12px;
+  cursor:pointer;
+  transition:0.2s;
+}
 
-    p {
-        margin-bottom: 15px;
-        line-height: 1.6;
-    }
+.dropdown-content div:hover{
+  background:#222;
+  padding-left:18px;
+}
 
-    .warning {
-        background: #7f1d1d;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-    }
+.content{
+  display:none;
+  animation:fade 0.3s ease;
+}
 
-    .success {
-        background: #065f46;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-    }
+.content.active{
+  display:block;
+}
 
-    pre {
-        background: #0f172a;
-        padding: 15px;
-        border-radius: 8px;
-        overflow-x: auto;
-        border: 1px solid #334155;
-    }
+@keyframes fade{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
 
-    code {
-        color: #38bdf8;
-    }
+.section{
+  background:#181818;
+  padding:18px;
+  border-radius:10px;
+  margin-bottom:15px;
+}
 
-    footer {
-        text-align: center;
-        margin-top: 50px;
-        color: #64748b;
-    }
-
-    @media(max-width: 768px) {
-        aside {
-            display: none;
-        }
-
-        main {
-            margin-left: 0;
-        }
-    }
+.section h3{
+  margin-top:0;
+  color:#00f5ff;
+}
 </style>
-
 </head>
 <body>
 
-<aside>
-    <h2>Mục Lục</h2>
-    <ul>
-        <li><a href="#gioithieu">Giới thiệu</a></li>
-        <li><a href="#cai-dat">Cài đặt</a></li>
-        <li><a href="#su-dung">Sử dụng</a></li>
-        <li><a href="#loi">Xử lý lỗi</a></li>
-    </ul>
-</aside>
+<!-- HERO -->
+<div class="hero">
+  <h1><b>Hướng Dẫn Việt Hóa Game Pokemon</b></h1>
+</div>
 
-<main>
+<!-- MAIN -->
+<div class="main-box">
 
-<header>
-    <h1>Hướng Dẫn Kỹ Thuật Cài Đặt Hệ Thống</h1>
-</header>
+  <!-- DROPDOWN -->
+  <div class="dropdown">
+    <button class="dropdown-btn" onclick="toggleDropdown()">
+      Giới thiệu ▼
+    </button>
 
-<section id="gioithieu">
-    <h2>1. Giới thiệu</h2>
-    <p>Tài liệu này hướng dẫn bạn cách cài đặt và cấu hình hệ thống một cách chính xác và an toàn.</p>
-    <div class="success">
-        ✔ Đảm bảo bạn có quyền quản trị trước khi thực hiện.
+    <div class="dropdown-content" id="dropdownMenu">
+      <div onclick="selectTab('intro','Giới thiệu')">Giới thiệu</div>
+      <div onclick="selectTab('rpgxp','RPGXP')">RPGXP</div>
+      <div onclick="selectTab('gba','GBA')">GBA</div>
+      <div onclick="selectTab('nds','NDS')">NDS</div>
+      <div onclick="selectTab('3ds','3DS')">3DS</div>
+      <div onclick="selectTab('switch','SWITCH')">SWITCH</div>
     </div>
-</section>
+  </div>
 
-<section id="cai-dat">
-    <h2>2. Cài đặt</h2>
-    <p>Chạy lệnh sau để cài đặt:</p>
-    <pre><code>sudo apt update
-sudo apt install example-package</code></pre>
-</section>
-
-<section id="su-dung">
-    <h2>3. Sử dụng</h2>
-    <p>Sau khi cài đặt, bạn có thể khởi chạy chương trình bằng:</p>
-    <pre><code>example-command --start</code></pre>
-</section>
-
-<section id="loi">
-    <h2>4. Xử lý lỗi</h2>
-    <div class="warning">
-        ⚠ Nếu gặp lỗi quyền truy cập, hãy kiểm tra lại quyền người dùng.
+  <!-- GIỚI THIỆU -->
+  <div id="intro" class="content active">
+    <div class="section">
+      <h3>Giới thiệu chung</h3>
+      <p>
+        Website tổng hợp hướng dẫn Việt hóa Pokemon trên nhiều nền tảng.
+        Bao gồm trích xuất text, chỉnh sửa bảng mã và build lại game/ROM.
+      </p>
     </div>
-    <p>Xem log hệ thống bằng lệnh:</p>
-    <pre><code>journalctl -xe</code></pre>
-</section>
+  </div>
 
-<footer>
-    © 2026 Hướng Dẫn Kỹ Thuật | Thiết kế bởi Bạn
+  <!-- RPGXP -->
+  <div id="rpgxp" class="content">
+    <div class="section">
+      <h2>I. Mở đầu</h2>
+      <p>Lời mở đầu cho hệ RPGXP này là sửa dễ <s>vl</s>, dễ nhất trong các hệ, vì bạn sẽ không cần đụng đến <strong>Pointer</strong> hay <strong>HEX</strong>.</p>
+      <h2>II. Công cụ</h2>
+      <p><u><i>Mình sẽ chia riêng ra PC và Android</u></i></p>
+      <h3>1. PC</h3>
+      <p><strong>• RPG Maker XP </strong>(Nó sẽ cho các bạn dùng thử 30 ngày còn mua hay crack tùy các bạn)<br>
+      <strong>• Notepad++ </strong>(Sửa văn bản)<br>
+      <strong>• FontForge</strong> (Để vẽ lại phông chữ)</p>
+      <h3>2. Android</h3>
+      <p><strong>• Trình quản lí tệp tin </strong>(Khuyến khích dùng <strong>Zarchiver</strong> hoặc <strong>MT Manager</strong>)<br><strong>• Text editor</strong> (có sẵn trong 2 trình quản lí tệp tin mình nói trên)<br><strong>• Joiplay </strong>(Để test game)</p>
+      
+      
+      
+      
+    </div>
+  </div>
+
+  <!-- GBA -->
+  <div id="gba" class="content">
+    <div class="section">
+      <h3>Sắp có 🐧</h3>
+      <p></p>
+    </div>
+  </div>
+
+  <!-- NDS -->
+  <div id="nds" class="content">
+    <div class="section">
+      <h3>Sắp có 🐧</h3>
+      <p></p>
+    </div>
+  </div>
+  
+  <!-- 3DS -->
+  <div id="3ds" class="content">
+    <div class="section">
+      <h3>Sắp có 🐧</h3>
+      <p></p>
+    </div>
+  </div>
+
+  <!-- Switch -->
+  <div id="switch" class="content">
+    <div class="section">
+      <h3>Sắp có 🐧</h3>
+      <p></p>
+    </div>
+  </div>
+
+<p><strong>
+<script>
+function toggleDropdown(){
+  var menu=document.getElementById("dropdownMenu");
+  menu.style.display=menu.style.display==="block"?"none":"block";
+}
+
+function selectTab(tabId,label){
+  var contents=document.getElementsByClassName("content");
+  for(var i=0;i<contents.length;i++){
+    contents[i].classList.remove("active");
+  }
+
+  document.getElementById(tabId).classList.add("active");
+  document.querySelector(".dropdown-btn").innerText=label+" ▼";
+  document.getElementById("dropdownMenu").style.display="none";
+}
+
+window.onclick=function(e){
+  if(!e.target.matches('.dropdown-btn')){
+    document.getElementById("dropdownMenu").style.display="none";
+  }
+}
+</script>
+<footer class="footer">
+  &copy; 2026 QDuckVN
 </footer>
-
-</main>
-
 </body>
 </html>
