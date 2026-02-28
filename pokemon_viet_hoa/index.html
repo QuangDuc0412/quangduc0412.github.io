@@ -244,8 +244,54 @@ body{
       
       <details class="accordion">
       <summary>2. Android</summary>
-      <p><strong>Bước 1:</strong> Các bạn tải game về và giải nén nó ra<br><br><strong>Bước 2:</strong> Vào thư mục Data xem bên trong có thư mục nào tên Scripts không (thường sẽ không có) nếu có thì nhảy đến <strong>Bước 4</strong>, sau đó mở Joiplay thêm Game vào<br><br><strong>Bước 3:</strong> Giữ vào biểu tượng Game chọn "<strong>Giải nén/Đóng gói lại Scripts</strong>"<br><img src=/pokemon_viet_hoa/img/JoiPlay_1.png width=200><br><strong>Bước 4:</strong> Quay trở lại <strong>Trình duyệt tệp tin</strong> lúc này sẽ hiện 1 thư mục <strong>UnpackedScripts</strong> trong <strong>Data</strong>. Bấm vào <strong>UnpackedScripts</strong> tìm tệp tin <strong>Main.rb</strong> rồi thêm "<strong>$DEBUG=true</strong>" vào dòng đầu như hình dưới<br><img src=/pokemon_viet_hoa/img/JoiPlay_2.png width=200><br>
-      </p>
+      <h3>Bước 1:</h3>
+  <p>Các bạn tải game về và giải nén ra.</p>
+
+  <h3>Bước 2:</h3>
+  <p>
+    Vào thư mục <strong>Data</strong> kiểm tra xem có thư mục 
+    <strong>Scripts</strong> không (thường thì không có, nếu có thì nhảy đến <strong>Bước 4</strong>).
+    Sau đó mở Joiplay và thêm game vào.
+  </p>
+
+  <h3>Bước 3:</h3>
+  <p>
+    Giữ vào biểu tượng game và chọn 
+    "<strong>Giải nén/Đóng gói lại Scripts</strong>".
+  </p>
+  <img src="/pokemon_viet_hoa/img/JoiPlay_1.png"
+       width="220"
+       style="display:block;margin:10px auto;border-radius:10px;">
+
+  <h3>Bước 4:</h3>
+  <p>
+    Quay lại <strong>Trình duyệt tệp tin</strong>, lúc này sẽ xuất hiện thư mục 
+    <strong>UnpackedScripts</strong> trong <strong>Data</strong>.
+    Mở file <strong>Main.rb</strong> và thêm:
+  </p>
+
+  <p><strong>$DEBUG=true</strong></p>
+
+  <img src="/pokemon_viet_hoa/img/JoiPlay_2.png"
+       width="220"
+       style="display:block;margin:10px auto;border-radius:10px;">
+
+  <h3>Bước 5:</h3>
+  <p>
+    Vào game → tìm mục <strong>Debug</strong>.
+    (Một số game bấm <strong>F9</strong>,
+    một số game hiện trong <strong>Menu</strong>).
+    Sau đó chọn:
+  </p>
+
+  <p><strong>Debug → Other options → Extract Text</strong></p>
+  
+  <p>Đợi nó báo hoàn thành rồi quay lại <strong>Trình duyệt tệp tin</strong>. Bây giờ ở thư mục của Game sẽ hiện file "<strong>intl.txt</strong>, đây chính là file mà bạn sẽ dịch (⚠️ Lưu ý chỉ dịch dòng thứ 2 ví dụ như hình dưới đây)</p>
+  
+  <img src="/pokemon_viet_hoa/img/JoiPlay_3.png"
+       width="220"
+       style="display:block;margin:10px auto;border-radius:10px;">
+  
       </details>
       
       
