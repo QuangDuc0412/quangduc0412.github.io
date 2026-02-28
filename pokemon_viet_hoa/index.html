@@ -142,6 +142,39 @@ body{
   margin-top:0;
   color:#00f5ff;
 }
+.accordion{
+  margin-top:15px;
+  background:#181818;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid rgba(0,255,255,0.15);
+}
+
+.accordion summary{
+  cursor:pointer;
+  font-size:20px;
+  font-weight:bold;
+  color:#00f5ff;
+  list-style:none;
+}
+
+.accordion summary::-webkit-details-marker{
+  display:none;
+}
+
+.accordion summary::after{
+  content:" ▼";
+  font-size:14px;
+  transition:0.3s;
+}
+
+.accordion[open] summary::after{
+  content:" ▲";
+}
+
+.accordion p{
+  margin-top:10px;
+}
 </style>
 </head>
 <body>
@@ -175,8 +208,7 @@ body{
     <div class="section">
       <h3>Giới thiệu chung</h3>
       <p>
-        Website tổng hợp hướng dẫn Việt hóa Pokemon trên nhiều nền tảng.
-        Bao gồm trích xuất text, chỉnh sửa bảng mã và build lại game/ROM.
+        Mình tạo ra trang này để hướng dẫn các bạn cách để<strong>Việt Hóa</strong> một tựa game Pokémon.<br>Mình sẽ viết ra nhưng gì mình biết, mình tìm hiểu được để chia sẽ cho các bạn.
       </p>
     </div>
   </div>
@@ -188,14 +220,33 @@ body{
       <p>Lời mở đầu cho hệ RPGXP này là sửa dễ <s>vl</s>, dễ nhất trong các hệ, vì bạn sẽ không cần đụng đến <strong>Pointer</strong> hay <strong>HEX</strong>.</p>
       <h2>II. Công cụ</h2>
       <p><u><i>Mình sẽ chia riêng ra PC và Android</u></i></p>
-      <h3>1. PC</h3>
+      
+      <details class="accordion">
+      <summary>1. PC</summary>
       <p><strong>• RPG Maker XP </strong>(Nó sẽ cho các bạn dùng thử 30 ngày còn mua hay crack tùy các bạn)<br>
       <strong>• Notepad++ </strong>(Sửa văn bản)<br>
       <strong>• FontForge</strong> (Để vẽ lại phông chữ)</p>
-      <h3>2. Android</h3>
-      <p><strong>• Trình quản lí tệp tin </strong>(Khuyến khích dùng <strong>Zarchiver</strong> hoặc <strong>MT Manager</strong>)<br><strong>• Text editor</strong> (có sẵn trong 2 trình quản lí tệp tin mình nói trên)<br><strong>• Joiplay </strong>(Để test game)</p>
+      </details>
       
+      <details class="accordion">
+      <summary>2. Android</summary>
+      <p><strong>• Trình quản lí tệp tin </strong>(Khuyến khích dùng <strong>Zarchiver</strong> hoặc <strong>MT Manager</strong>)<br><strong>• Text editor</strong> (có sẵn trong 2 trình quản lí tệp tin mình nói trên)<br><strong>• Joiplay </strong>(Để test game)<br>
+      <strong>• Trình vẽ font</strong> (Mình chưa tìm được 1 trình vẽ font cho điện thoại khi nào tìm được sẽ update sau)</p>
+      </details>
       
+      <h2>III. Dịch</h2>
+      <p><u><i>Mình cũng sẽ chia riêng ra PC và Android</u></i></p>
+      <p>Mình sẽ sử dụng bản game <a href="https://eeveeexpo.com/infinity/" target="_blank"><font color="#00f5ff">Pokemon Infinity</font></a> để làm ví dụ cho các bạn.</p>
+      
+      <details class="accordion">
+      <summary>1. PC</summary>
+      </details>
+      
+      <details class="accordion">
+      <summary>2. Android</summary>
+      <p><strong>Bước 1:</strong> Các bạn tải game về và giải nén nó ra<br><br><strong>Bước 2:</strong> Vào thư mục Data xem bên trong có thư mục nào tên Scripts không (thường sẽ không có) nếu có thì nhảy đến <strong>Bước 4</strong>, sau đó mở Joiplay thêm Game vào<br><br><strong>Bước 3:</strong> Giữ vào biểu tượng Game chọn "<strong>Giải nén/Đóng gói lại Scripts</strong>"<br><img src=/img/JoiPlay_1.png><br><strong>Bước 4:</strong> Quay lại <strong>Trình duyệt tệp tin</strong> tìm thư mục Scripts
+      </p>
+      </details>
       
       
     </div>
