@@ -189,6 +189,27 @@ code {
   font-size:14px;
 }
 
+.code-container {
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+document.querySelectorAll(".copy-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const code = button.nextElementSibling.innerText;
+    navigator.clipboard.writeText(code);
+    button.innerText = "Copied!";
+    setTimeout(() => button.innerText = "Copy", 1500);
+  });
+});
+
 </style>
 </head>
 <body>
