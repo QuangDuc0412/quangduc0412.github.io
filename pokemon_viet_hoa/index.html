@@ -307,15 +307,34 @@ body{
        
   <p>Sau khi Compile Text xong sẽ có 1 file mới tên "<strong>intl.dat</strong>".</p>
   <p>Việc bây giờ bạn cần làm là đổi tên file "<strong>intl.dat</strong>" → <strong>vietnamese.dat</strong> rồi đưa vào thư mục Data là xong.</p>
-  <p>Giờ vào game xem game đã có tiếng việt chưa.</p>
+  <p>Giờ vào game xem đã có tiếng việt chưa.</p>
   
   <img src="/pokemon_viet_hoa/img/JoiPlay_4.png"
        width="290"
        style="display:block;margin:10px auto;border-radius:10px;">
      
-  <p>Ồ vẫn chưa có... Tại vì đã sửa lệnh trong script đâu mà có 🤡</p>       
+  <p>Ồ vẫn chưa có... Tại vì đã sửa lệnh trong script đâu mà có 🤡</p>
+  
+  <h3>Bước 7:</h3>
+  <p>Vào thư mục <strong>UnpackedScripts hoặc Scripts</strong> tìm đến file <strong>Settings.rb</strong> tìm <strong>LANGUAGES = [...]</strong>như hình dưới.</p>
+  
+  <img src="/pokemon_viet_hoa/img/Android_Settings_1.png"
+       width="290"
+       style="display:block;margin:10px auto;border-radius:10px;">
       </details>  
       
+  <p>Rồi sửa<n>
+  <code>LANGUAGES = [  
+#  ["English","english.dat"],
+#  ["Skibidi","skibidi.dat"]
+]</code><n>
+  Thành <n>
+  <code>LANGUAGES = [  
+  ["English","english.dat"],
+  ["Tiếng Việt","vietnamese.dat"]
+]</code>
+  
+  
     </div>
   </div>
 
