@@ -353,12 +353,12 @@ LANGUAGES = [
 
 <pre><code>
 LANGUAGES = [
-  ["English","english.dat"],
-  ["Tiếng Việt","vietnamese.dat"]
+  ["Tiếng Việt","vietnamese.dat"],
+  ["English","english.dat"]
 ]
 </code></pre>
        
-<p>Bây giờ sẽ vào game xem có lỗi gì không khi sửa script.</p>
+<p>Bây giờ sẽ vào game xem có lỗi gì không khi sửa script.<br>Nếu vào game bình thường thì bạn đã đi được 90% rồi đấy.</p>
 <p>Đây rồi có 1 lỗi là:</p>
 <img src="/pokemon_viet_hoa/img/JoiPlay_5.png"
        width="290"
@@ -374,7 +374,20 @@ undefined local variable or method `havedata' for nil:NilClass
        width="290"
        style="display:block;margin:10px auto;border-radius:10px;">
        
-<p>      
+<p>Các bạn sửa:</p>
+
+<pre><code>if LANGUAGES.length >= 2
+    pokemon_system.language = pbChooseLanguage if !havedata
+    pbLoadMessages("Data/" + LANGUAGES[pokemon_system.language][1])
+  end</code></pre>
+  
+<p>Thành:</p>
+
+<pre><code>if LANGUAGES.length >= 2
+    pokemon_system.language = pbChooseLanguage
+    pbLoadMessages("Data/" + LANGUAGES[pokemon_system.language][1])
+  end</code></pre>
+
       </details>  
       
   
