@@ -185,7 +185,6 @@ pre {
 }
 
 code {
-  color:#00f5ff;
   font-family:Consolas, monospace;
   font-size:14px;
 }
@@ -359,10 +358,23 @@ LANGUAGES = [
 ]
 </code></pre>
        
+<p>Bây giờ sẽ vào game xem có lỗi gì không khi sửa script.</p>
+<p>Đây rồi có 1 lỗi là:</p>
+<img src="/pokemon_viet_hoa/img/JoiPlay_5.png"
+       width="290"
+       style="display:block;margin:10px auto;border-radius:10px;">
+<pre><code>
+Script 'MultiAutoSave' line 117: NameError occurred.
+undefined local variable or method `havedata' for nil:NilClass
+</code></pre>
+
+<p>Lỗi này xảy ra ở <strong>dòng 117 file MultiAutoSave.rb</strong> giờ chúng ta sẽ tìm đến file đó để xem nó viết như nào nhé.<br>Đây là dòng 117:</p>
+
+<img src="/pokemon_viet_hoa/img/Error.png"
+       width="290"
+       style="display:block;margin:10px auto;border-radius:10px;">
        
-       
-       
-       
+<p>      
       </details>  
       
   
